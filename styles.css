@@ -1,0 +1,271 @@
+/* University of Poppleton Staff Directory - Stylesheet */
+
+/* Color scheme: yellows and greens */
+:root {
+    --primary-yellow: #FFD700;
+    --light-yellow: #FFFACD;
+    --dark-yellow: #DAA520;
+    --primary-green: #2E8B57;
+    --light-green: #90EE90;
+    --dark-green: #1B5E20;
+    --white: #FFFFFF;
+    --text-dark: #333333;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: var(--text-dark);
+    background-color: var(--light-yellow);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Fixed Header */
+header {
+    background: linear-gradient(135deg, var(--primary-green) 0%, var(--dark-green) 100%);
+    color: var(--white);
+    padding: 20px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    text-align: center;
+    font-size: 2.5em;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+header p {
+    text-align: center;
+    font-size: 1.2em;
+    margin-top: 5px;
+}
+
+/* Main Container - Account for fixed header */
+.main-container {
+    margin-top: 120px;
+    margin-bottom: 80px;
+    flex: 1;
+}
+
+/* Three Column Layout */
+.content-wrapper {
+    display: flex;
+    max-width: 1400px;
+    margin: 0 auto;
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Left Menu - 20% */
+.left-menu {
+    flex: 0 0 20%;
+    background-color: var(--white);
+    border: 2px solid var(--primary-green);
+    border-radius: 8px;
+    padding: 20px;
+    height: fit-content;
+    position: sticky;
+    top: 140px;
+}
+
+.left-menu h2 {
+    color: var(--primary-green);
+    margin-bottom: 15px;
+    font-size: 1.5em;
+    border-bottom: 2px solid var(--primary-yellow);
+    padding-bottom: 10px;
+}
+
+.left-menu nav ul {
+    list-style: none;
+}
+
+.left-menu nav ul li {
+    margin: 10px 0;
+}
+
+.left-menu nav ul li a {
+    color: var(--dark-green);
+    text-decoration: none;
+    display: block;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.left-menu nav ul li a:hover {
+    background-color: var(--primary-yellow);
+    color: var(--white);
+}
+
+/* Main Content - 60% */
+.main-content {
+    flex: 0 0 60%;
+    background-color: var(--white);
+    border: 2px solid var(--primary-green);
+    border-radius: 8px;
+    padding: 30px;
+}
+
+.main-content h2 {
+    color: var(--primary-green);
+    margin-bottom: 20px;
+    font-size: 2em;
+    border-bottom: 3px solid var(--primary-yellow);
+    padding-bottom: 10px;
+}
+
+.main-content h3 {
+    color: var(--dark-green);
+    margin-top: 25px;
+    margin-bottom: 15px;
+    font-size: 1.5em;
+}
+
+.main-content p {
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+/* Staff List */
+.staff-list {
+    list-style: none;
+    margin-top: 20px;
+}
+
+.staff-member {
+    background-color: var(--light-yellow);
+    border-left: 4px solid var(--primary-green);
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.staff-member:hover {
+    transform: translateX(5px);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.staff-member h4 {
+    color: var(--dark-green);
+    font-size: 1.3em;
+    margin-bottom: 5px;
+}
+
+.staff-member .position {
+    color: var(--primary-green);
+    font-style: italic;
+    margin-bottom: 8px;
+}
+
+.staff-member .email {
+    color: var(--text-dark);
+    font-size: 0.9em;
+}
+
+.staff-member .email a {
+    color: var(--dark-green);
+    text-decoration: none;
+}
+
+.staff-member .email a:hover {
+    text-decoration: underline;
+}
+
+/* Right Facts Panel - 20% */
+.right-facts {
+    flex: 0 0 20%;
+    background-color: var(--white);
+    border: 2px solid var(--primary-green);
+    border-radius: 8px;
+    padding: 20px;
+    height: fit-content;
+    position: sticky;
+    top: 140px;
+}
+
+.right-facts h2 {
+    color: var(--primary-green);
+    margin-bottom: 15px;
+    font-size: 1.5em;
+    border-bottom: 2px solid var(--primary-yellow);
+    padding-bottom: 10px;
+}
+
+.fact-box {
+    background-color: var(--light-green);
+    border-left: 3px solid var(--dark-green);
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+}
+
+.fact-box h3 {
+    color: var(--dark-green);
+    font-size: 1.1em;
+    margin-bottom: 8px;
+}
+
+.fact-box p {
+    color: var(--text-dark);
+    font-size: 0.95em;
+    line-height: 1.5;
+}
+
+/* Fixed Footer */
+footer {
+    background: linear-gradient(135deg, var(--dark-green) 0%, var(--primary-green) 100%);
+    color: var(--white);
+    text-align: center;
+    padding: 20px 0;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+/* Links */
+a {
+    color: var(--dark-green);
+}
+
+a:hover {
+    color: var(--primary-yellow);
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .content-wrapper {
+        flex-direction: column;
+    }
+    
+    .left-menu,
+    .main-content,
+    .right-facts {
+        flex: 1 1 100%;
+    }
+    
+    .left-menu,
+    .right-facts {
+        position: static;
+    }
+}
