@@ -31,7 +31,7 @@ body {
 header {
     background: linear-gradient(135deg, var(--primary-green) 0%, var(--dark-green) 100%);
     color: var(--white);
-    padding: 20px 0;
+    padding: 48px 0; /* increased to fit larger logo */
     position: fixed;
     top: 0;
     left: 0;
@@ -52,13 +52,35 @@ header p {
     margin-top: 5px;
 }
 
+/* Logo in header (top-left) */
+.logo {
+    position: absolute;
+    left: 20px;
+    top: 12px;
+    width: 128px; /* doubled */
+    height: 128px; /* doubled */
+    display: inline-block;
+}
+
 /* Main Container - Account for fixed header */
 .main-container {
-    margin-top: 120px;
+    margin-top: 220px; /* increased to account for larger fixed header/logo */
     margin-bottom: 80px;
     flex: 1;
 }
 
+/* Make logo smaller on narrow screens to avoid overlap */
+@media (max-width: 600px) {
+    .logo {
+        left: 12px;
+        top: 10px;
+        width: 88px; /* doubled small-screen size */
+        height: 88px;
+    }
+    header h1 {
+        font-size: 1.6em;
+    }
+}
 /* Three Column Layout */
 .content-wrapper {
     display: flex;
